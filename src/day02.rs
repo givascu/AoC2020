@@ -10,7 +10,7 @@ pub fn solve_1() -> i64 {
             let c = c.chars().next().unwrap();
             let password = password.trim();
 
-            (min..max + 1).contains(&password.chars().filter(|x| *x == c).count())
+            (min..=max).contains(&password.chars().filter(|x| *x == c).count())
         })
         .count() as i64
 }
